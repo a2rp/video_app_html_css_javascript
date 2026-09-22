@@ -1,55 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>a2rp: Video App</title>
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
+
+        <meta
+            name="description"
+            content="A modern video showcase for Prativishwa: one-n-all, featuring project highlights and an embedded video experience."
+        />
+
+        <meta name="author" content="Ashish Ranjan" />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta name="theme-color" content="#000000" />
 
         <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/7.0.0/mediaelementplayer.min.css"
+            rel="canonical"
+            href="https://a2rp.github.io/video_app_html_css_javascript/"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/7.0.0/mediaelement-and-player.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="title">a2rp: Video App</div>
 
-            <div class="content">
-                <h1>Prativishwa: one-n-all</h1>
-                <h3>
-                    My Full-Stack Java-Apache Derby Application with following
-                    facilities in it
-                </h3>
-                <ul>
-                    <li>User Register-Login</li>
-                    <li>MP3 Music Player</li>
-                    <li>Record Book</li>
-                    <li>Diary/Notes Writing</li>
-                    <li>Address Book</li>
-                    <li>ED Notepad</li>
-                </ul>
-                <img
-                    src="https://i3.ytimg.com/vi/Eor5TeuIEkw/maxresdefault.jpg"
-                    alt=""
-                />
-                <div class="watch">WATCH VIDEO</div>
-                <div class="videoContainer">
+        <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prativishwa Video Showcase" />
+
+        <meta
+            property="og:title"
+            content="Prativishwa: one-n-all | Video Showcase"
+        />
+
+        <meta
+            property="og:description"
+            content="Explore Prativishwa: one-n-all through a focused project showcase and interactive video experience."
+        />
+
+        <meta
+            property="og:url"
+            content="https://a2rp.github.io/video_app_html_css_javascript/"
+        />
+
+        <meta
+            property="og:image"
+            content="https://a2rp.github.io/video_app_html_css_javascript/public/preview.png"
+        />
+
+        <meta
+            property="og:image:alt"
+            content="Prativishwa video showcase preview"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+            name="twitter:title"
+            content="Prativishwa: one-n-all | Video Showcase"
+        />
+
+        <meta
+            name="twitter:description"
+            content="Explore Prativishwa: one-n-all through a focused project showcase and interactive video experience."
+        />
+
+        <meta
+            name="twitter:image"
+            content="https://a2rp.github.io/video_app_html_css_javascript/public/preview.png"
+        />
+
+        <meta
+            name="twitter:image:alt"
+            content="Prativishwa video showcase preview"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+
+        <title>Prativishwa: one-n-all | Video Showcase</title>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="header-container">
+                <a class="brand" href="#home" aria-label="Prativishwa home">
+                    <img
+                        class="brand-logo"
+                        src="./public/logo.png"
+                        alt="Prativishwa logo"
+                    />
+
+                    <span class="brand-content">
+                        <strong class="brand-name"> Prativishwa </strong>
+
+                        <span class="brand-label"> one-n-all </span>
+                    </span>
+                </a>
+
+                <nav class="desktop-nav" aria-label="Main navigation">
+                    <a href="#about"> About </a>
+
+                    <a href="#features"> Features </a>
+
+                    <a href="#video"> Video </a>
+                </nav>
+
+                <button
+                    class="menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-navigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav
+                id="mobile-navigation"
+                class="mobile-nav"
+                aria-label="Mobile navigation"
+                hidden
+            >
+                <a href="#about"> About </a>
+
+                <a href="#features"> Features </a>
+
+                <a href="#video"> Video </a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <p class="section-label">Project Video Showcase</p>
+
+                        <h1>
+                            Prativishwa:
+                            <span> one-n-all </span>
+                        </h1>
+
+                        <p class="hero-text">
+                            A focused presentation of the Prativishwa project,
+                            its purpose, core ideas, and video experience.
+                        </p>
+
+                        <div class="hero-actions">
+                            <button
+                                class="primary-button watch-video-button"
+                                type="button"
+                                data-video-open
+                            >
+                                <span class="play-icon"> ▶ </span>
+
+                                <span> Watch Video </span>
+                            </button>
+
+                            <a class="secondary-button" href="#features">
+                                Explore Features
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-info" aria-label="Project overview">
+                        <article class="info-card">
+                            <span class="info-number"> 01 </span>
+
+                            <div>
+                                <strong> Simple </strong>
+
+                                <p>
+                                    Focused presentation with no unnecessary
+                                    complexity.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="info-number"> 02 </span>
+
+                            <div>
+                                <strong> Responsive </strong>
+
+                                <p>
+                                    Designed for desktop, tablet, and mobile
+                                    screens.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="info-number"> 03 </span>
+
+                            <div>
+                                <strong> Interactive </strong>
+
+                                <p>
+                                    Accessible video playback with
+                                    keyboard-friendly controls.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section about-section">
+                <div class="section-container about-grid">
+                    <div>
+                        <p class="section-label">About the Project</p>
+
+                        <h2>
+                            One platform.
+                            <br />
+                            One shared vision.
+                        </h2>
+                    </div>
+
+                    <div class="about-content">
+                        <p>
+                            Prativishwa: one-n-all is presented here through a
+                            clean visual experience that keeps the project and
+                            its video at the center of attention.
+                        </p>
+
+                        <p>
+                            This showcase uses lightweight HTML, CSS, and
+                            JavaScript without unnecessary frameworks or runtime
+                            dependencies.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="section features-section">
+                <div class="section-container">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">Highlights</p>
+
+                            <h2>Project Features</h2>
+                        </div>
+
+                        <p>
+                            A simple set of ideas presented through a clean and
+                            focused interface.
+                        </p>
+                    </div>
+
+                    <div class="features-grid">
+                        <article class="feature-card">
+                            <span class="feature-number"> 01 </span>
+
+                            <h3>Unified Experience</h3>
+
+                            <p>
+                                A focused presentation keeps the content
+                                organized and easy to explore.
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <span class="feature-number"> 02 </span>
+
+                            <h3>Video First</h3>
+
+                            <p>
+                                The embedded presentation can be opened in an
+                                accessible, responsive full-screen modal.
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <span class="feature-number"> 03 </span>
+
+                            <h3>Lightweight</h3>
+
+                            <p>
+                                Built with native browser technologies without
+                                jQuery or unnecessary media libraries.
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <span class="feature-number"> 04 </span>
+
+                            <h3>Responsive</h3>
+
+                            <p>
+                                The layout adapts cleanly across large desktops,
+                                tablets, and smaller mobile screens.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="video" class="section video-section">
+                <div class="section-container">
+                    <div class="video-heading">
+                        <div>
+                            <p class="section-label">Watch the Presentation</p>
+
+                            <h2>See Prativishwa in action</h2>
+                        </div>
+
+                        <p>
+                            Open the project video in a distraction-free viewer.
+                        </p>
+                    </div>
+
+                    <button
+                        class="video-preview watch-video-button"
+                        type="button"
+                        data-video-open
+                        aria-label="Play Prativishwa project video"
+                    >
+                        <img
+                            src="https://img.youtube.com/vi/Eor5TeuIEkw/maxresdefault.jpg"
+                            alt="Prativishwa project video thumbnail"
+                        />
+
+                        <span class="video-overlay" aria-hidden="true"></span>
+
+                        <span class="video-play">
+                            <span class="video-play-icon"> ▶ </span>
+
+                            <span class="video-play-text"> Watch Video </span>
+                        </span>
+
+                        <span class="video-meta"> Project Presentation </span>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="./public/logo.png" alt="Prativishwa logo" />
+
+                        <div>
+                            <strong> Prativishwa </strong>
+
+                            <p>
+                                A lightweight interactive project video
+                                showcase.
+                            </p>
+                        </div>
+                    </div>
+
+                    <nav class="footer-links" aria-label="External links">
+                        <a
+                            href="https://www.ashishranjan.net"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Portfolio
+                        </a>
+
+                        <a
+                            href="https://github.com/a2rp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://codepen.io/ash1198"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CodePen
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/aashishranjan"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/theash.ashish"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Facebook
+                        </a>
+
+                        <a
+                            href="https://www.youtube.com/channel/UCLHIBQeFQIxmRveVAjLvlbQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            YouTube
+                        </a>
+
+                        <a href="mailto:ash.ranjan09@gmail.com"> Email </a>
+                    </nav>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        Copyright &copy;
+                        <span id="current-year"></span>
+                        <a
+                            href="https://www.ashishranjan.net/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ashish Ranjan
+                        </a>
+                    </p>
+
+                    <div class="support-links">
+                        <a
+                            href="https://a2rp-donation-page.netlify.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Support
+                        </a>
+
+                        <a
+                            href="https://buymeacoffee.com/a2rp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Buy Me a Coffee
+                        </a>
+
+                        <a
+                            href="https://www.patreon.com/a2rp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Patreon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <button
+            class="back-to-top"
+            type="button"
+            aria-label="Back to top"
+            title="Back to top"
+            hidden
+        >
+            ↑
+        </button>
+
+        <div
+            class="video-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="video-modal-title"
+            aria-describedby="video-modal-description"
+            hidden
+        >
+            <div class="video-backdrop" data-video-close></div>
+
+            <div class="video-dialog">
+                <div class="video-dialog-header">
+                    <div>
+                        <p class="section-label">Project Presentation</p>
+
+                        <h2 id="video-modal-title">Prativishwa: one-n-all</h2>
+
+                        <p id="video-modal-description" class="visually-hidden">
+                            Embedded Prativishwa project video player.
+                        </p>
+                    </div>
+
+                    <button
+                        class="video-close"
+                        type="button"
+                        data-video-close
+                        aria-label="Close video"
+                        title="Close video"
+                    >
+                        ×
+                    </button>
+                </div>
+
+                <div class="video-frame">
                     <iframe
-                        width="100%"
-                        height="300px"
-                        src="https://www.youtube.com/embed/Eor5TeuIEkw"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        id="project-video"
+                        title="Prativishwa project presentation"
+                        data-src="https://www.youtube.com/embed/Eor5TeuIEkw?autoplay=1&rel=0"
+                        src="about:blank"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share;
+                        "
                         allowfullscreen
                     ></iframe>
-                    <div class="close">X</div>
                 </div>
             </div>
         </div>
+
+        <script src="./script.js"></script>
     </body>
 </html>
